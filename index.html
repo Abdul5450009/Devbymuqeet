@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans+Sunuwar&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- Model Viewer CDN -->
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+</head>
+
+<body>
+    <div id="tsparticles"></div>
+    <script src="particle.js"></script>
+    <header data-Aos="fade-down">
+        <span class="logo">Abdul Muqeet</span>
+        <div class="menu-toggle">&#9776;</div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#project">Projects</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="hero-section" id="home">
+            <section class="leftsection">
+                <lottie-player class="model" src="man working.json" background="transparent" speed="1" loop autoplay
+                    data-Aos="zoom-in">
+                </lottie-player>
+
+            </section>
+            <section class="rightsection">
+                <h1 data-Aos="fade-right">Crafting slick UI with love.</h1>
+                <span class="dis" data-Aos="fade-left">I specialize in <span id="typed-text"></span></span>
+                <a href="https://github.com/Abdul5450009?tab=repositories" data-Aos="fade-in">View my work</a>
+            </section>
+        </section>
+        <section class="about_main" data-Aos="fade-up" id="about">
+            <section class="about-card">
+                <section class="left">
+                    <h1>About me</h1>
+                </section>
+                <hr class="hr">
+                <section class="right">
+                    <h2>Frontend Developer | Creative Coder | UI/UX Enthusiast</h2>
+                    <p>I'm a passionate frontend developer who crafts clean and responsive user interfaces with a touch
+                        <br>
+                        of creativity. I specialize in HTML, CSS, and JavaScript, bringing ideas to life through modern
+                        <br>
+                        web animations and interactive designs. Always learning, always building.
+                    </p>
+                </section>
+            </section>
+        </section>
+        <section class="contact_main" id="contact" data-Aos="fade-right">
+            <section class="contact-card">
+                <section class="contact-left">
+                    <section class="profile">
+                        <h1>Abdul Muqeet</h1>
+                        <img src="Abdul.png" alt="">
+                    </section>
+                    <h2>Front end Developer</h2>
+                    <span class="icon">
+                        <a href="https://www.instagram.com/devbymuqeet?igsh=cXYxOTVtc3hlNWs1"><i class="fab fa-instagram"></i></a>
+                        <a href="https://github.com/Abdul5450009?tab=repositories"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/abdul-muqeet-shahzad-053674300/"><i class="fab fa-linkedin"></i></a>
+                    </span>
+                </section>
+                <section class="contact-right">
+                    <span class="info"><a href="mailto:F2023332001@umt.edu.pk">📧 F2023332001@umt.edu.pk</a></span>
+                    <span class="info-1">📍 Lahore, Pakistan</span>
+                    <span class="info-2">😄 Let's Work together</span>
+                </section>
+            </section>
+        </section>
+
+        <section class="project_main" id="project" data-Aos="fade-up">
+            <section class="project-card-1">
+                <img src="Project-1 (2).png" alt="">
+                <a href="https://github.com/Abdul5450009/Credit-card-ui">View Project</a>
+            </section>
+            <section class="project-card-2">
+                <img src="project-2.png" alt="">
+                <a href="https://github.com/Abdul5450009/Focus-zen">View Project</a>
+            </section>
+            <section class="project-card-3">
+                <img src="project-3.png" alt="">
+                <a href="https://github.com/Abdul5450009/Upgraded-Pricing-card">View Project</a>
+            </section>
+            <section class="project-card-4">
+                <img src="project-4.png" alt="">
+                <a href="https://github.com/Abdul5450009/Weather-ui">View Project</a>
+            </section>
+        </section>
+    </main>
+    <!-- All scripts here -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="scrolling.js"></script>
+    <script src="nav.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    </script>
+    <script>
+        const typed = new Typed("#typed-text", {
+            strings: ["Frontend Development", "UI/UX Designe", "Web Animate", "Creative Coder"],
+            typeSpeed: 60,
+            backSpeed: 40,
+            backDelay: 1500,
+            loop: true
+        });
+    </script>
+
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true,
+            mirror: false,
+            delay: 0,
+            offset: 120,
+            anchorPlacement: 'top-bottom'
+        });
+    </script>
+</body>
+
+</html>

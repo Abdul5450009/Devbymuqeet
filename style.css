@@ -1,0 +1,819 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* body {
+    background: linear-gradient(to right, #f9fafb, #e2e8f0);
+} */
+/* #tsparticles {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    top: 0;
+    left: 0;
+} */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+#tsparticles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}
+
+header {
+    height: 80px;
+    width: 100%;
+    position: sticky;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+    border: 1px solid white;
+    z-index: 1;
+    border: none;
+}
+
+.logo {
+    font-size: clamp(20px, 2.5vw, 24px);
+    color: #cecece;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+nav>ul {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 40px;
+}
+
+nav>ul>li {
+    list-style-type: none;
+}
+
+nav>ul>li>a {
+    font-weight: 500;
+    font-size: clamp(14px, 2vw, 18px);
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 0.5px;
+    text-decoration-line: none;
+    color: #dbdbdb;
+    position: relative;
+}
+
+nav>ul>li>a::after {
+    content: '';
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    position: absolute;
+    left: 0;
+    transition: width 0.5s ease-in-out;
+    background: #adadadb0;
+}
+
+nav>ul>li>a:hover {
+    color: #ffffff;
+}
+
+nav>ul>li>a:hover::after {
+    width: 100%;
+}
+
+.hero-section {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.hero-section>.leftsection {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.leftsection>.model {
+    width: 500px;
+    height: 400px;
+}
+
+.rightsection {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: start;
+    align-items: self-start;
+    gap: 20px;
+    white-space: none;
+}
+
+.rightsection>h1 {
+    font-size: 3rem;
+    color: #cecece;
+}
+
+.rightsection>.dis {
+    font-size: 1.5rem;
+    color: #bdbdbd;
+}
+
+.rightsection>a {
+    border: 1px solid black;
+    border-radius: 12px;
+    color: whitesmoke;
+    font-size: 1.2rem;
+    font-weight: 400;
+    padding: 10px;
+    background: #faf8f812;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    text-decoration-line: none;
+}
+
+.about_main {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+}
+
+.about_main>.about-card {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    background: #faf8f812;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    gap: 40px;
+    position: relative;
+    padding: 16px;
+    border-radius: 16px;
+}
+
+.left>h1 {
+    font-size: 3rem;
+    color: #cecece;
+}
+
+.hr {
+    content: '';
+    width: 2px;
+    height: 100%;
+    background: rgb(80, 80, 80);
+    position: absolute;
+    left: 26%;
+    top: 0;
+    border: none;
+    border-radius: 20px;
+}
+
+.right>h2 {
+    font-size: 1.5rem;
+    color: whitesmoke;
+    font-weight: 500;
+}
+
+.right>p {
+    color: rgb(220, 220, 220);
+    font-weight: 400;
+}
+
+.contact_main {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+}
+
+.contact-card {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    background: #faf8f812;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    gap: 100px;
+    position: relative;
+    padding: 20px;
+    border-radius: 16px;
+    width: auto;
+    height: auto;
+}
+
+.contact-left {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 20px;
+}
+
+.contact-left>h1 {
+    font-size: 3rem;
+    color: #cecece;
+    letter-spacing: 1px;
+}
+
+.contact-left>h2 {
+    font-size: 2rem;
+    color: whitesmoke;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.icon>a {
+    font-size: 1.5rem;
+    color: whitesmoke;
+    font-weight: 500;
+    margin: 20px 0 0 20px;
+}
+
+.contact-left>.profile {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: start;
+    gap: 20px;
+}
+
+.profile>img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profile>h1 {
+    font-size: 3rem;
+    color: #cecece;
+    letter-spacing: 1px;
+}
+
+.contact-right {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 20px;
+}
+
+.info>a,
+.info-1,
+.info-2 {
+    font-size: 1.5rem;
+    color: whitesmoke;
+    font-weight: 500;
+    margin-top: 20px;
+    letter-spacing: 1px;
+    text-decoration-line: none;
+}
+
+.project_main {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+    gap: 40px;
+}
+
+.project-card-1,
+.project-card-2,
+.project-card-3,
+.project-card-4 {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    background: #faf8f812;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    gap: 100px;
+    position: relative;
+    padding: 16px;
+    border-radius: 16px;
+    width: auto;
+    height: auto;
+}
+
+.project-card-1>img,
+.project-card-2>img,
+.project-card-3>img,
+.project-card-4>img {
+    width: 100%;
+    height: 250px;
+    border-radius: 20px;
+    position: relative;
+    object-fit: cover;
+}
+
+.project-card-1>a,
+.project-card-2>a,
+.project-card-3>a,
+.project-card-4>a {
+    position: absolute;
+    top: 60%;
+    left: 0;
+    width: 100%;
+    height: 120px;
+    background: #0000005d;
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 18px;
+    opacity: 0;
+    transition: 0.3s ease;
+    border-radius: 12px;
+    text-decoration-line: none;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.project-card-1:hover>a,
+.project-card-2:hover>a,
+.project-card-3:hover>a,
+.project-card-4:hover>a {
+    opacity: 1;
+}
+/* Hamburger icon (hidden on desktop) */
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    nav ul {
+        flex-direction: row;
+        width: 100%;
+        background: #000000e0;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+        margin-top: 10px;
+        display: none;
+        padding: 20px;
+        border-radius: 12px;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .hero-section {
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .leftsection>.model {
+        width: 300px;
+        height: 300px;
+    }
+
+    .rightsection {
+        align-items: center;
+    }
+
+    .rightsection>h1 {
+        font-size: 1.5rem;
+    }
+
+    .rightsection>.dis {
+        font-size: 1.2rem;
+    }
+
+    .rightsection>a {
+        font-size: 1rem;
+    }
+
+    .about-card {
+        text-align: center;
+    }
+
+    .left>h1 {
+        font-size: 1.5rem;
+        letter-spacing: 0.5px;
+    }
+
+    .right>h2 {
+        font-size: 1.3rem;
+        line-height: 1.4;
+        margin-top: -20px;
+    }
+
+    .right>p {
+        font-size: 1rem;
+        letter-spacing: 0.5px;
+        line-height: 1.4;
+        margin-top: 20px;
+    }
+
+    .hr {
+        display: none;
+    }
+
+    .contact-card {
+        width: 310px;
+        height: auto;
+    }
+
+    .contact-left>.profile {
+        text-align: center;
+        gap: 40px;
+        padding: 16px;
+    }
+
+    .profile>h1 {
+        font-size: 2rem;
+    }
+
+    .contact-left {
+        align-items: center;
+    }
+
+    .contact-left>h2 {
+        font-size: 1.5rem;
+        margin-top: -10px;
+    }
+
+    .contact-right {
+        text-align: center;
+        align-items: center;
+        margin-top: -50px;
+    }
+
+    .info>a,
+    .info-1,
+    .info-2 {
+        font-size: 1rem;
+    }
+
+    .project-card-1,
+    .project-card-2,
+    .project-card-3,
+    .project-card-4{
+        padding: 5px;
+    }
+}
+
+@media only screen and (min-width: 321px) and (max-width: 376px) {
+    .hero-section {
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .leftsection>.model {
+        width: 300px;
+        height: 300px;
+    }
+
+    .rightsection {
+        align-items: center;
+    }
+
+    .rightsection>h1 {
+        font-size: 1.6rem;
+    }
+
+    .rightsection>.dis {
+        font-size: 1.3rem;
+    }
+
+    .rightsection>a {
+        font-size: 1.1rem;
+    }
+
+    .about-card {
+        text-align: center;
+    }
+
+    .left>h1 {
+        font-size: 1.6rem;
+        letter-spacing: 0.5px;
+    }
+
+    .right>h2 {
+        font-size: 1.4rem;
+        line-height: 1.4;
+        margin-top: -20px;
+    }
+
+    .right>p {
+        font-size: 1.1rem;
+        letter-spacing: 0.5px;
+        line-height: 1.4;
+        margin-top: 20px;
+    }
+
+    .hr {
+        display: none;
+    }
+
+    .contact-card {
+        width: 320px;
+        height: auto;
+    }
+
+    .contact-left>.profile {
+        text-align: center;
+        gap: 40px;
+        padding: 16px;
+    }
+
+    .profile>h1 {
+        font-size: 2.1rem;
+    }
+
+    .contact-left {
+        align-items: center;
+    }
+
+    .contact-left>h2 {
+        font-size: 1.6rem;
+        margin-top: -10px;
+    }
+
+    .contact-right {
+        text-align: center;
+        align-items: center;
+        margin-top: -50px;
+    }
+
+    .info>a,
+    .info-1,
+    .info-2 {
+        font-size: 1.1rem;
+    }
+    .project-card-1,
+    .project-card-2,
+    .project-card-3,
+    .project-card-4{
+        padding: 5px;
+    }
+}
+
+@media only screen and (min-width: 377px) and (max-width: 426px) {
+    .hero-section {
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .leftsection>.model {
+        width: 330px;
+        height: 320px;
+    }
+
+    .rightsection {
+        align-items: center;
+    }
+
+    .rightsection>h1 {
+        font-size: 1.7rem;
+    }
+
+    .rightsection>.dis {
+        font-size: 1.4rem;
+    }
+
+    .rightsection>a {
+        font-size: 1.2rem;
+    }
+
+    .about-card {
+        text-align: center;
+    }
+
+    .left>h1 {
+        font-size: 1.7rem;
+        letter-spacing: 0.5px;
+    }
+
+    .right>h2 {
+        font-size: 1.5rem;
+        line-height: 1.4;
+        margin-top: -20px;
+    }
+
+    .right>p {
+        font-size: 1.3rem;
+        letter-spacing: 0.5px;
+        line-height: 1.4;
+        margin-top: 20px;
+    }
+
+    .hr {
+        display: none;
+    }
+
+    .contact-card {
+        width: 400px;
+        height: auto;
+    }
+
+    .contact-left>.profile {
+        text-align: center;
+        gap: 40px;
+        padding: 16px;
+    }
+
+    .profile>h1 {
+        font-size: 2.2rem;
+    }
+
+    .contact-left {
+        align-items: center;
+    }
+
+    .contact-left>h2 {
+        font-size: 1.7rem;
+        margin-top: -10px;
+    }
+
+    .contact-right {
+        text-align: center;
+        align-items: center;
+        margin-top: -50px;
+    }
+
+    .info>a,
+    .info-1,
+    .info-2 {
+        font-size: 1.2rem;
+    }
+    .project-card-1,
+    .project-card-2,
+    .project-card-3,
+    .project-card-4{
+        padding: 5px;
+    }
+}
+
+@media only screen and (min-width: 427px) and (max-width: 769px) {
+    .hero-section {
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .rightsection {
+        align-items: center;
+    }
+
+    .rightsection>h1 {
+        font-size: 2.5rem;
+    }
+
+    .rightsection>.dis {
+        font-size: 2rem;
+    }
+
+    .rightsection>a {
+        font-size: 1.5rem;
+    }
+
+    .about-card {
+        align-items: start;
+    }
+
+    .left>h1 {
+        font-size: 1.8rem;
+        letter-spacing: 0.5px;
+        text-align: center;
+    }
+
+    .right>h2 {
+        font-size: 1.6rem;
+        line-height: 1.4;
+        margin-top: -20px;
+        text-align: center;
+    }
+
+    .right>p {
+        font-size: 1.3rem;
+        letter-spacing: 0.5px;
+        line-height: 1.4;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .hr {
+        display: none;
+    }
+
+    .contact-left {
+        align-items: center;
+    }
+
+    .contact-right {
+        align-items: center;
+    }
+    .project-card-1,
+    .project-card-2,
+    .project-card-3,
+    .project-card-4{
+        padding: 5px;
+    }
+}
+
+@media only screen and (min-width: 770px) and (max-width: 969px) {
+    .hero-section {
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .rightsection {
+        align-items: center;
+    }
+
+    .rightsection>h1 {
+        font-size: 2.5rem;
+    }
+
+    .rightsection>.dis {
+        font-size: 2rem;
+    }
+
+    .rightsection>a {
+        font-size: 1.5rem;
+    }
+    .project-card-1,
+    .project-card-2,
+    .project-card-3,
+    .project-card-4{
+        padding: 5px;
+    }
+}
+
+@media only screen and (min-width: 970px) and (max-width: 1025px) {
+    .hero-section {
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .rightsection {
+        align-items: center;
+    }
+}
