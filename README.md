@@ -1,2 +1,2 @@
 # Devbymuqeet
-My portfolio live preview: https://abdul5450009.github.io/Devbymuqeet/
+My portfolio live preview: https://mqt22.github.io/Devbymuqeet/
